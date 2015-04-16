@@ -10,6 +10,12 @@ class mainCharacter{
 		float yVel;
 		float xVel;
 		bool resting;
+		float xLimit;
+		float gravityCounter;
+		bool restingIterator;
+		bool jumpB;
+		bool dblJump;
+
 	public:
 		mainCharacter(int,int);
 		mainCharacter();
@@ -21,4 +27,6 @@ class mainCharacter{
 		float getxVel();
 		float getyVel();
 		void changexVel(float);
+		void xDecay();
+		void newIteration();
 };

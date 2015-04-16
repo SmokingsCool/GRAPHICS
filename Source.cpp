@@ -75,13 +75,14 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS){
 		glfwSetWindowShouldClose(window, GL_TRUE);}
 	else if (action == GLFW_REPEAT){
-		if(key == GLFW_KEY_LEFT ){
-			gameObject.adjustCoord(-10,0);
+		if(/*key == GLFW_KEY_LEFT  ||*/ glfwGetKey(window,GLFW_KEY_LEFT)){
+			cout << "STILL BEING PRESSED";
+			gameObject.moveHoriz(2);
 		}
 		else if(key == GLFW_KEY_RIGHT ){
-			gameObject.adjustCoord(10,0);
+			gameObject.moveHoriz(-2);
 		}
-		else if(key == GLFW_KEY_UP ){
+		else if(key == GLFW_KEY_UP){
 			//gameObject.adjustCoord(0,-10);
 		}
 		else if(key == GLFW_KEY_DOWN ){
@@ -89,10 +90,12 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 		}}
 	else if (action == GLFW_PRESS){
 		if(key == GLFW_KEY_LEFT ){
-			gameObject.moveHoriz(3);
+			
+			gameObject.moveHoriz(1);
+			
 		}
 		else if(key == GLFW_KEY_RIGHT ){
-			gameObject.moveHoriz(-3);
+			gameObject.moveHoriz(-1);
 		}
 		else if(key == GLFW_KEY_UP ){
 			gameObject.mainJump();

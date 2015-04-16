@@ -20,11 +20,12 @@ void Game::mainJump(){
 	mainChar.jump();
 }
 void Game::Run(){
-	
+	mainChar.newIteration();
 	addVelocities();
-
+	mainChar.xDecay();
 	currLevel.Render();
 	mainChar.Render();
+	
 	string checkThisShit = currLevel.checkCollisionMain(mainChar);
 	
 	mainChar.gravityCheck();
