@@ -12,12 +12,15 @@ class Level{
 		string fileInputName;
 		int xAdj;
 		int yAdj;
-
+		int score;
+		bool firstRender;
+		float screenWidth;
+		float screenHeight;
 	public:
 		void Level::updateCoord(int ,int );
 		void Load();
 		void setFileInputName(string );
 		void Render();
-		bool checkCollisionMain(mainCharacter);
-
+		string checkCollisionMain(mainCharacter&);
+		void setCentre(float , float );
 };

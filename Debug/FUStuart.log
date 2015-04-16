@@ -1,21 +1,27 @@
-﻿Build started 12/04/2015 18:55:02.
-     1>Project "\\ueahome4\stusci6\ppr13epu\data\Documents\Visual Studio 2012\Projects\FUStuart\FUStuart\FUStuart.vcxproj" on node 2 (Build target(s)).
+﻿Build started 15/04/2015 23:40:07.
+     1>Project "D:\GRAPHICSCW\FUStuart.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt mainCharacter.cpp
+         D:\P\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt mainCharacter.cpp
          mainCharacter.cpp
-     1>\\ueahome4\stusci6\ppr13epu\data\documents\visual studio 2012\projects\fustuart\fustuart\maincharacter.cpp(10): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>\\ueahome4\stusci6\ppr13epu\data\documents\visual studio 2012\projects\fustuart\fustuart\maincharacter.cpp(11): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>\\ueahome4\stusci6\ppr13epu\data\documents\visual studio 2012\projects\fustuart\fustuart\maincharacter.cpp(12): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>\\ueahome4\stusci6\ppr13epu\data\documents\visual studio 2012\projects\fustuart\fustuart\maincharacter.cpp(13): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(14): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(15): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(17): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(49): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(57): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(81): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\graphicscw\maincharacter.cpp(42): warning C4101: 'min' : unreferenced local variable
+     1>d:\graphicscw\maincharacter.cpp(117): warning C4305: '+=' : truncation from 'double' to 'float'
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\ueahome4\stusci6\ppr13epu\data\Documents\Visual Studio 2012\Projects\FUStuart\Debug\FUStuart.exe" /INCREMENTAL /NOLOGO glu32.lib glfw3.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\ueahome4\stusci6\ppr13epu\data\Documents\Visual Studio 2012\Projects\FUStuart\Debug\FUStuart.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\ueahome4\stusci6\ppr13epu\data\Documents\Visual Studio 2012\Projects\FUStuart\Debug\FUStuart.lib" /MACHINE:X86 Debug\Level.obj
+         D:\P\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GRAPHICSCW\Debug\FUStuart.exe" /INCREMENTAL /NOLOGO glu32.lib glfw3.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GRAPHICSCW\Debug\FUStuart.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GRAPHICSCW\Debug\FUStuart.lib" /MACHINE:X86 Debug\Level.obj
          Debug\mainCharacter.obj
          Debug\Source.obj
          Debug\Game.obj
          Debug\Square.obj
-         FUStuart.vcxproj -> \\ueahome4\stusci6\ppr13epu\data\Documents\Visual Studio 2012\Projects\FUStuart\Debug\FUStuart.exe
-     1>Done Building Project "\\ueahome4\stusci6\ppr13epu\data\Documents\Visual Studio 2012\Projects\FUStuart\FUStuart\FUStuart.vcxproj" (Build target(s)).
+         FUStuart.vcxproj -> D:\GRAPHICSCW\Debug\FUStuart.exe
+     1>Done Building Project "D:\GRAPHICSCW\FUStuart.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.43
+Time Elapsed 00:00:00.68

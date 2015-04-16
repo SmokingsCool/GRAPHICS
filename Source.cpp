@@ -9,8 +9,6 @@
 #include <gl\GL.h>
 #include <gl\GLU.h>
 
-
-
 // Function prototypes
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
@@ -42,7 +40,7 @@ int main()
 
     // Define the viewport dimensions
     glViewport(0, 0, WIDTH, HEIGHT);
-	
+	gameObject.CreateLevel();
     // Game loop
     while (!glfwWindowShouldClose(window))
     {
@@ -58,8 +56,8 @@ int main()
 		glLoadIdentity();
 		gluOrtho2D(0, WIDTH, 0, HEIGHT);
 		glMatrixMode(GL_MODELVIEW);
+		gameObject.Run();
 		
-		gameObject.CreateLevel();
 		//glFlush();
         // Swap the screen buffers
         glfwSwapBuffers(window);
@@ -84,23 +82,24 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 			gameObject.adjustCoord(10,0);
 		}
 		else if(key == GLFW_KEY_UP ){
-			gameObject.adjustCoord(0,10);
+			//gameObject.adjustCoord(0,-10);
 		}
 		else if(key == GLFW_KEY_DOWN ){
-			gameObject.adjustCoord(0,-10);
+			gameObject.adjustCoord(0,10);
 		}}
 	else if (action == GLFW_PRESS){
 		if(key == GLFW_KEY_LEFT ){
-			gameObject.adjustCoord(-10,0);
+			gameObject.moveHoriz(3);
 		}
 		else if(key == GLFW_KEY_RIGHT ){
-			gameObject.adjustCoord(10,0);
+			gameObject.moveHoriz(-3);
 		}
 		else if(key == GLFW_KEY_UP ){
-			gameObject.adjustCoord(0,10);
+			gameObject.mainJump();
+			//gameObject.adjustCoord(0,-10);
 		}
 		else if(key == GLFW_KEY_DOWN ){
-			gameObject.adjustCoord(0,-10);
+			//gameObject.adjustCoord(0,10);
 		}
 	}
 }

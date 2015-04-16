@@ -9,11 +9,29 @@ void Game::CreateLevel(){
 	Level newLevel = Level();
 	currLevel.setFileInputName("level1.lvl");
 	currLevel.Load();
+	currLevel.setCentre(screenHeight,screenWidth);
+	mainChar = mainCharacter(screenWidth,screenHeight);
+	
+}
+void Game::addVelocities(){
+	currLevel.updateCoord(mainChar.getxVel(),mainChar.getyVel());
+}
+void Game::mainJump(){
+	mainChar.jump();
+}
+void Game::Run(){
+	
+	addVelocities();
+
 	currLevel.Render();
-	mainCharacter mainChar = mainCharacter(screenWidth,screenHeight);
 	mainChar.Render();
-	currLevel.checkCollisionMain(mainChar);
+	string checkThisShit = currLevel.checkCollisionMain(mainChar);
+	
+	mainChar.gravityCheck();
 }
 void Game::adjustCoord(int xAdj, int yAdj){
 	currLevel.updateCoord(xAdj,yAdj);
+}
+void Game::moveHoriz(float amount){
+	mainChar.changexVel(amount);
 }
