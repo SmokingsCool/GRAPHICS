@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <Windows.h>
+#include "Image_Loading\nvImage.h"
 using namespace std;
 class mainCharacter{
 	protected:
@@ -15,8 +17,12 @@ class mainCharacter{
 		bool restingIterator;
 		bool jumpB;
 		bool dblJump;
-
+		GLuint thisTexture;
+		string direction;
 	public:
+		string getDirection();
+		void throwProj();
+		void setTexture(string);
 		mainCharacter(int,int);
 		mainCharacter();
 		void Render();
@@ -29,4 +35,5 @@ class mainCharacter{
 		void changexVel(float);
 		void xDecay();
 		void newIteration();
+		GLuint loadPNG(char*);
 };

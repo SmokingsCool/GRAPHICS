@@ -79,29 +79,34 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 			cout << "STILL BEING PRESSED";
 			gameObject.moveHoriz(2);
 		}
-		else if(key == GLFW_KEY_RIGHT ){
+		if(key == GLFW_KEY_RIGHT ){
 			gameObject.moveHoriz(-2);
 		}
-		else if(key == GLFW_KEY_UP){
+		if(key == GLFW_KEY_UP){
 			//gameObject.adjustCoord(0,-10);
 		}
-		else if(key == GLFW_KEY_DOWN ){
+		if(key == GLFW_KEY_DOWN ){
 			gameObject.adjustCoord(0,10);
 		}}
-	else if (action == GLFW_PRESS){
+		if (action == GLFW_PRESS){
+			if(key == GLFW_KEY_SPACE){
+				gameObject.mainCharThrow();
+			}
 		if(key == GLFW_KEY_LEFT ){
-			
+			gameObject.changeMainTexDir("right");
 			gameObject.moveHoriz(1);
 			
 		}
-		else if(key == GLFW_KEY_RIGHT ){
+		if(key == GLFW_KEY_RIGHT ){
+			
+			gameObject.changeMainTexDir("left");
 			gameObject.moveHoriz(-1);
 		}
-		else if(key == GLFW_KEY_UP ){
+		if(key == GLFW_KEY_UP ){
 			gameObject.mainJump();
 			//gameObject.adjustCoord(0,-10);
 		}
-		else if(key == GLFW_KEY_DOWN ){
+		if(key == GLFW_KEY_DOWN ){
 			//gameObject.adjustCoord(0,10);
 		}
 	}
